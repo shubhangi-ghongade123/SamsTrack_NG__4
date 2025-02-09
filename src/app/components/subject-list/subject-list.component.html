@@ -1,0 +1,34 @@
+<div *ngIf="role === 'admin'">
+  <app-admin-menu></app-admin-menu>
+</div>
+<div *ngIf="role === 'faculty'">
+  <app-user-menu></app-user-menu>
+</div>
+<div class="container">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th class="text-center" scope="col">Subject ID</th>
+        <th class="text-center" scope="col">Subject Name</th>
+        <th class="text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of subjects">
+        <td class="text-center">{{ s.id }}</td>
+        <td class="text-center">{{ s.name }}</td>
+        <td class="text-center">
+          <a [routerLink]="['/get-subject-by-id', s.id]" class="btn btn-success"> Edit </a> &nbsp;
+
+
+
+            <button *ngIf="role==='admin'" (click)="deleteSubject(s.id)" class="btn btn-danger"> Delete </button>
+
+
+
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

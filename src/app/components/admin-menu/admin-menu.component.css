@@ -1,0 +1,23 @@
+/* Ensure the navbar is centered within the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Optional: Adjust the height of the navbar if necessary */
+.navbar {
+  height: 60px; /* Adjust based on your preference */
+}
+
+/* Ensure the content below the navbar is visible and not hidden */
+body {
+  display: flex;
+  flex-direction: column;
+}
+a{
+  cursor: pointer;
+}

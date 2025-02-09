@@ -1,0 +1,46 @@
+<div *ngIf="role === 'admin'">
+  <app-admin-menu></app-admin-menu>
+</div>
+<div *ngIf="role === 'faculty'">
+  <app-user-menu></app-user-menu>
+</div>
+
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Welcome</h3>
+      <p>You are 30 seconds away from earning your own money!</p>
+    </div>
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <h3 class="register-heading">Add Subject</h3>
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="row register-form">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    required
+                    name="name"
+                    placeholder="Enter Subject Name *"
+                    formControlName="name"
+                  />
+                </div>
+                <input type="submit" class="btnRegister" value="Add Subject" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-text {
+  background: linear-gradient(90deg, #ff6b6b, #f8e71c, #4a90e2, #50e3c2);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: slideIn 2s ease-out;
+  font-weight: 600;
+}
